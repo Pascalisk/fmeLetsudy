@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel ="stylesheet" href="FMEinput.css">
+
+<header>
+    <img id="logo" src = "letstudylogo.png">
+    <h1> Πρόγραμμα Υπολογισμού Oφέλους που προκύπτει για το ΦΜΕ με την χρήση Ασύγχρονης Διδασκαλίας </h1>
+</header>
+
+<form id = "numberForm" action = "FMEflexResults.html">
+
+<title>Responsive Table with Input Cells</title>
+
+<body>
+<table>
+  <tbody id="pinakA">
+            <thead>
+                <th>Μαθήματα:</th>
+                <th>Μάθημα Α'</th>
+                <th>Μάθημα Β'</th>
+                <th>Μάθημα Γ'</th>
+                <th>Μάθημα Δ'</th>
+                <th>Μάθημα Ε'</th>
+            </thead>
+            <tr>
+                <td> <textarea name="txt" id="oresAnalog" readonly cols="9" rows="3">Ώρες Αναλογικής διδασκαλίας άνα μάθημα:</textarea></td>
+                <td><input type="number" id="num1" name="num1" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+                <td><input type="number" id="num2" name="num2" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+                <td><input type="number" id="num3" name="num3" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+                <td><input type="number" id="num4" name="num4" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+                <td><input type="number" id="num5" name="num5" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+            </tr>
+
+            <tr>
+            <td><textarea name="txt" id="oresAnalogTmimat" readonly cols="9" rows="3">Πλήθος τμημάτων Αναλογικής διδασκαλίας άνα μάθημα:</textarea></td>
+                <td><input type="number" id="tnum1" name="tnum1" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+                <td><input type="number" id="tnum2" name="tnum2" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+                <td><input type="number" id="tnum3" name="tnum3" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+                <td><input type="number" id="tnum4" name="tnum4" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+                <td><input type="number" id="tnum5" name="tnum5" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td> 
+            </tr>                
+            <tr>
+                
+            <td> <textarea name="txt" id="kostosOrasAnalog" readonly cols="9" rows="3">Κόστος / ώρα αναλογικής διδασκαλίας σε €:</textarea></td>
+            <td> <input type="number" id="knum10" name= "knum10" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <td>_____________________________________</td>
+        </tbody>
+
+        <tbody id="pinakB">
+            <tr>
+            <td><textarea  name="txt" id="oresAsixronis" readonly cols="9" rows="3">Ώρες Ασύγχρονης διδασκαλίας άνα μάθημα:</textarea></td>
+            <td> <input type="number" id="Asnum1" name="Asnum1" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+            <td> <input type="number" id="Asnum2" name="Asnum2" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+            <td> <input type="number" id="Asnum3" name="Asnum3" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+            <td> <input type="number" id="Asnum4" name="Asnum4" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+            <td> <input type="number" id="Asnum5" name="Asnum5" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+            </tr>
+        
+            <tr>
+            <td> <textarea name="txt" id="oresAsixronisTmimata" readonly cols="9" rows="3">Πλήθος τμημάτων Ασύγχρονης διδασκαλίας άνα μάθημα:</textarea></td>
+            <td>   <input type="number" id="tASnum1" name="tASnum1" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+            <td>   <input type="number" id="tASnum2" name="tASnum2" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+            <td>   <input type="number" id="tASnum3" name="tASnum3" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+            <td>   <input type="number" id="tASnum4" name="tASnum4" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>
+            <td>   <input type="number" id="tASnum5" name="tASnum5" oninput ="this.value = this.value.replace(/[^0-9]/g, '');" required></td>           
+        </tr>
+
+        <tr>
+            <td><textarea name="txt" id="KostoAsixr" readonly cols="10" rows="3">Κόστος / ώρα ασύγχρονης διδασκαλίας σε €:</textarea></td>
+            <td><input type="number" id="kASnum10" name= "kASnum10" oninput ="this.value = this.value.replace(/[^0-9]/g, '');"required></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td> </td>
+            </tr>
+            
+        </tbody>
+       
+</table>
+
+<button  class="my-button" type="submit">Υπολόγισε</button>
+   
+</form>
+
+</body>
+
+    <footer>
+                <h5> @Copyright Pascalis Karajannnis 2023 </h5>
+    </footer>
+
+</html>

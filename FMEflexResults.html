@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel ="stylesheet" href="FMEinput.css">
+  <img id="logo" src = "letstudylogo.png">
+
+  <h1> Πρόγραμμα Υπολογισμού Oφέλους που προκύπτει για το ΦΜΕ με την χρήση Ασύγχρονης Διδασκαλίας </h1>
+
+  <h3> Αποτελέσματα  </h3>
+
+
+<title>Responsive Table</title>
+
+</head>
+
+<script src="FMEscript.js"> </script>
+
+<body onload="displayNumbersWithSeparators()">
+
+<table>
+
+  <thead>
+    <tr>
+      <th>Έτη</th>
+      <th>1ο Έτος</th>
+      <th>2ο Έτος</th>
+      <th>3ο Έτος</th>
+      <th>4ο Έτος</th>
+      <th>5ο Έτος</th>
+      <th>Σύνολα</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Ετήσιο Κόστος Αναλογικής διδασκαλίας σε €:</td>
+      <td><span id="resultA1"></td>
+      <td><span id="resultA2"></span></td>
+      <td><span id="resultA3"></span></td>
+      <td><span id="resultA4"></span></td>
+      <td><span id="resultA5"></span></td>
+      <td> <span id="resultASinola"> </td>
+      </tr>
+
+    <tr>
+      <td>Ετήσιο Κόστος Ασύγχρονης διδασκαλίας σε €: </td>
+      <td><span id="resultB1"> </span></td>
+      <td><span id="resultB2"> </span></td>
+      <td><span id="resultB3"> </span></td>
+      <td><span id="resultB4"> </span></td>
+      <td><span id="resultB5"> </span></td>
+      <td><span id="resultDSinola"></span></td>
+    </tr>
+
+    <tr>
+      <td>Κόστος διδασκαλίας με Ασύγχρονη σε €:</td>
+      <td><span id="resultC1"></span></td>
+      <td><span id="resultC2"></span></td>
+      <td><span id="resultC3"></span></td>
+      <td><span id="resultC4"></span></td>
+      <td><span id="resultC5"></span></td>
+      <td><span id="resultADSinola"></td>
+    </tr>
+
+    <tr>
+      <td>Όφελος που προκύπτει για το ΦΜΕ σε €:</td>
+      <td><span id = "ofelosA" ></span></td>
+      <td><span id = "ofelosB" ></span></td>
+      <td><span id = "ofelosC" ></span></td>
+      <td><span id = "ofelosD" ></span></td>
+      <td><span id = "ofelosE" ></span></td>
+      <td><span id=  "ofelosSinola"></span></td>
+    </tr>
+
+    <td>__________________________________________________</td>
+    <tr>
+      <td> Συνολικό Όφελος που προκύπτει στην 5 ετία για το ΦΜΕ σε €:</td>
+      <td> <span id = "SYN5ofelos" > </span></td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+
+
+<script>
+  const queryParams = new URLSearchParams (window.location.search);
+
+  const num1 = parseFloat(queryParams.get('num1'));
+  const num2 = parseFloat(queryParams.get('num2'));
+  const num3 = parseFloat(queryParams.get('num3'));
+  const num4 = parseFloat(queryParams.get('num4'));
+  const num5 = parseFloat(queryParams.get('num5'));
+
+  const tnum1 = parseFloat(queryParams.get('tnum1'));
+  const tnum2 = parseFloat(queryParams.get('tnum2'));
+  const tnum3 = parseFloat(queryParams.get('tnum3'));
+  const tnum4 = parseFloat(queryParams.get('tnum4'));
+  const tnum5 = parseFloat(queryParams.get('tnum5'));
+
+      const knum10 = parseFloat(queryParams.get('knum10'));
+//_________________________________________________________________________________________________
+
+  const Asnum1 = parseFloat(queryParams.get('Asnum1'));
+  const Asnum2 = parseFloat(queryParams.get('Asnum2'));
+  const Asnum3 = parseFloat(queryParams.get('Asnum3'));
+  const Asnum4 = parseFloat(queryParams.get('Asnum4'));
+  const Asnum5 = parseFloat(queryParams.get('Asnum5'));
+
+  const tAsnum1 = parseFloat(queryParams.get('tASnum1'));
+  const tAsnum2 = parseFloat(queryParams.get('tASnum2'));
+  const tAsnum3 = parseFloat(queryParams.get('tASnum3'));
+  const tAsnum4 = parseFloat(queryParams.get('tASnum4'));
+  const tAsnum5 = parseFloat(queryParams.get('tASnum5'));
+
+      const kASnum10 = parseFloat(queryParams.get('kASnum10'));
+
+//_________________________________________________________________________________________________
+
+      document.getElementById('resultA1').textContent = eKostosANAlD1 
+      (num1, num2, num3, num4, num5,tnum1,tnum2,tnum3,tnum4,tnum5,knum10);
+
+      document.getElementById('resultA2').textContent = eKostosANAlD2 
+      (num1, num2, num3, num4, num5,tnum1,tnum2,tnum3,tnum4,tnum5,knum10);
+
+      document.getElementById('resultA3').textContent = eKostosANAlD3 
+      (num1, num2, num3, num4, num5,tnum1,tnum2,tnum3,tnum4,tnum5,knum10);
+
+      document.getElementById('resultA4').textContent = eKostosANAlD4 
+      (num1, num2, num3, num4, num5,tnum1,tnum2,tnum3,tnum4,tnum5,knum10);
+
+      document.getElementById('resultA5').textContent = eKostosANAlD5 
+      (num1, num2, num3, num4, num5,tnum1,tnum2,tnum3,tnum4,tnum5,knum10);
+
+      document.getElementById('resultASinola').textContent =  ASinola
+      (num1, num2, num3, num4, num5,tnum1,tnum2,tnum3,tnum4,tnum5,knum10);
+
+//__________________________________________________________________________________
+
+      document.getElementById('resultB1').textContent = eKostosASIXD1 
+      (Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,kASnum10);
+
+//________________________________________________________________________________//
+
+      document.getElementById('resultC1').textContent = newKostos1
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+
+      document.getElementById('resultC2').textContent = newKostos2
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+
+      document.getElementById('resultC3').textContent = newKostos3
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+
+      document.getElementById('resultC4').textContent = newKostos4
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+
+      document.getElementById('resultC5').textContent = newKostos5
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+
+      document.getElementById('resultADSinola').textContent =  rADSinola
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+//__________________________________________________________________________________
+
+      document.getElementById('ofelosA').textContent = ofelos1
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1, Asnum2, Asnum3, Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+{  
+//__________________________________________________________________________________
+
+      document.getElementById('ofelosB').textContent = ofelos2
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+  
+//__________________________________________________________________________________
+
+      document.getElementById('ofelosC').textContent = ofelos3
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+
+      document.getElementById('ofelosD').textContent = ofelos4
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+
+      document.getElementById('ofelosE').textContent = ofelos5
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+
+      document.getElementById('ofelosSinola').textContent =  ofelosSinola
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+  
+
+//____________________ Format the number with a separator and Euro currency symbol____________________________
+
+document.getElementById('SYN5ofelos').textContent =  ofelos5ESinoL
+      (num1, num2, num3, num4, num5, tnum1, tnum2, tnum3, tnum4, tnum5, 
+      Asnum1,Asnum2,Asnum3,Asnum4,Asnum5,
+      tAsnum1,tAsnum2,tAsnum3,tAsnum4,tAsnum5,
+      knum10,kASnum10);
+//____________________ Format the number with a separator and Euro currency symbol____________________________ 
+}
+var resultElement = document.getElementById('resultC1');
+// Get the value inside the span and convert it to a number
+var resultValue = parseFloat(resultElement.textContent);
+
+// Check the condition and change the color accordingly
+if (resultValue < 0) {
+resultElement.style.color = 'red';
+} else {
+resultElement.style.color = 'black';
+}
+
+var resultElement = document.getElementById('resultC2');
+// Get the value inside the span and convert it to a number
+var resultValue = parseFloat(resultElement.textContent);
+
+// Check the condition and change the color accordingly
+if (resultValue < 0) {
+resultElement.style.color = 'red';
+} else {
+resultElement.style.color = 'black';
+}
+var resultElement = document.getElementById('resultC3');
+// Get the value inside the span and convert it to a number
+var resultValue = parseFloat(resultElement.textContent);
+
+// Check the condition and change the color accordingly
+if (resultValue < 0) {
+resultElement.style.color = 'red';
+} else {
+resultElement.style.color = 'black';
+}
+var resultElement = document.getElementById('resultC4');
+// Get the value inside the span and convert it to a number
+var resultValue = parseFloat(resultElement.textContent);
+
+// Check the condition and change the color accordingly
+if (resultValue < 0) {
+resultElement.style.color = 'red';
+} else {
+resultElement.style.color = 'black';
+}
+var resultElement = document.getElementById('resultC5');
+// Get the value inside the span and convert it to a number
+var resultValue = parseFloat(resultElement.textContent);
+
+// Check the condition and change the color accordingly
+if (resultValue < 0) {
+resultElement.style.color = 'red';
+} else {
+resultElement.style.color = 'black';
+}
+
+var resultElement = document.getElementById('ofelosA');
+// Get the value inside the span and convert it to a number
+var resultValue = parseFloat(resultElement.textContent);
+
+// Check the condition and change the color accordingly
+if (resultValue < 0) {
+resultElement.style.color = 'red';
+} else {
+resultElement.style.color = 'green';
+}
+var resultElement = document.getElementById('ofelosB');
+
+// Get the value inside the span and convert it to a number
+var resultValue = parseFloat(resultElement.textContent);
+
+// Check the condition and change the color accordingly
+if (resultValue < 0) {
+resultElement.style.color = 'red';
+} else {
+resultElement.style.color = 'green';
+}
+var resultElement = document.getElementById('ofelosC');
+// Get the value inside the span and convert it to a number
+var resultValue = parseFloat(resultElement.textContent);
+// Check the condition and change the color accordingly
+if (resultValue < 0) {
+resultElement.style.color = 'red';
+} else {
+resultElement.style.color = 'green';
+}
+var resultElement = document.getElementById('ofelosD');
+// Get the value inside the span and convert it to a number
+var resultValue = parseFloat(resultElement.textContent);
+// Check the condition and change the color accordingly
+if (resultValue < 0) {
+resultElement.style.color = 'red';
+} else {
+resultElement.style.color = 'green';
+}
+var resultElement = document.getElementById('ofelosE');
+// Get the value inside the span and convert it to a number
+var resultValue = parseFloat(resultElement.textContent);
+// Check the condition and change the color accordingly
+if (resultValue < 0) {
+resultElement.style.color = 'red';
+} else {
+resultElement.style.color = 'green';
+}
+var resultElement = document.getElementById('ofelosSinola');
+// Get the value inside the span and convert it to a number
+var resultValue = parseFloat(resultElement.textContent);
+// Check the condition and change the color accordingly
+if (resultValue < 0) {
+resultElement.style.color = 'red';
+} else {
+resultElement.style.color = 'green';
+}
+var resultElement = document.getElementById('SYN5ofelos');
+// Get the value inside the span and convert it to a number
+var resultValue = parseFloat(resultElement.textContent);
+// Check the condition and change the color accordingly
+if (resultValue < 0) {
+resultElement.style.color = 'red';
+} else {
+resultElement.style.color = 'green';
+}
+</script>
+
+<button id="myButton" onclick="window.location.href='FMEInputFlex.html'"> Επιστροφή </button>
+
+</body>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+<h5> @Copyright Pascalis Karajannnis 2023 </h5>
+</footer>
+
+</html>
+
+

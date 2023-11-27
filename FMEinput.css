@@ -1,0 +1,266 @@
+
+/* Just for demonstration purposes, you can adjust border styles as needed */
+h1{
+    position: relative;
+    left: 110px;
+    font-size: 19px;
+    text-align: center;
+    color: #20496c;
+    width: 79%;
+    padding: 19px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    }
+img{
+    position: relative;
+    top:9px;
+    left: 565px;
+    max-width:10%;height:auto;
+    border: solid;
+    border-width: 3px;
+    border-style: outset;
+    border-color: lightgray;
+} 
+/* Just for demonstration purposes, you can adjust border styles as needed */
+table {
+    border-collapse: collapse;
+    width: 90%; 
+    margin-bottom: 2px;
+    margin-left: 87px;
+}
+th, td, tr {
+    border: 1px none ; /* Just for demonstration purposes, you can adjust border styles as needed */
+    padding: 1px;
+}
+/* Shrink the second column */
+th:nth-child(1),
+td:nth-child(1),
+th:nth-child(2),
+td:nth-child(2),
+th:nth-child(3),
+td:nth-child(3),
+th:nth-child(4),
+td:nth-child(4),
+th:nth-child(5),
+td:nth-child(5),
+th:nth-child(5),
+td:nth-child(6)
+{
+width: 93px; /* Set the width to your desired value */
+height: 9px; /* Set the width to your desired value */
+}
+h3{
+    position: relative;
+    top:2px;
+    left: 131px;
+    font-size: 19px;
+    text-align: center;
+  }
+  table {
+    width: 81%;
+    border-collapse: collapse;
+  }   
+  th {
+    padding: 5px;
+    font-size: 13px;
+    text-align: right;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+  td {
+      padding: 5px;
+      font-size: 16px;
+      text-align: right;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }  
+  /* Responsive design for smaller screens */
+  @media (max-width: 300px) {
+    table {
+      overflow-x: auto;
+    }
+  }
+
+#pinakA{
+color: darkblue;
+border-color: rgb(243, 237, 237);
+}
+#pinakB{
+color: rgb(13, 104, 45);
+border-color: rgb(239, 233, 233);
+}
+input {
+box-sizing: border-box;
+height: 39px;
+font-size: 17px;
+border-radius: 8px;
+border: none;
+}
+#knum10{
+border-color: crimson;
+background-color:rgb(66, 66, 165);
+color: aliceblue;
+margin-left: 10px;
+width: 91%;
+}
+#kASnum10{
+    border-color: crimson;
+    background-color:rgb(20, 157, 47);
+    color: aliceblue;
+    margin-left: 10px;
+    width: 91%;
+    }
+     .container {
+        max-width: 100px;
+        margin: 0 auto;
+        padding: 0px;  
+        margin-top: 3px;   
+        margin-left: 655px;
+     }
+    #num1, #num2, #num3, #num4, #num5{
+        margin-left: 9px;
+        background-color: aqua;
+        width: 91%;
+        text-align: center;
+       
+    }
+    #tnum1 , #tnum2, #tnum3, #tnum4, #tnum5{
+        margin-left: 9px;
+        background-color: aqua;
+        width: 91%;
+        text-align: center;
+    }
+    #Asnum1, #Asnum2, #Asnum3, #Asnum4, #Asnum5{
+        margin-left: 9px;
+        background-color: lightgreen;
+        width: 91%;
+        text-align: center;
+    }
+
+#tASnum1,#tASnum2,#tASnum3,#tASnum4,#tASnum5{
+margin-left: 9px;
+background-color: lightgreen;
+width: 90%;
+text-align: center;
+}
+#oresAnalog  {
+width: 79%;
+border: none;
+text-align: right;
+font-size: 16px;
+height: 41px;
+overflow: hidden;
+}
+#oresAnalogTmimat{
+width: 77%;
+border: none;
+text-align: right;
+font-size: 16px;
+height: 41px;
+overflow: hidden;
+}
+#oresAsixronis{
+width: 77%;
+border: none;
+text-align: right;
+font-size: 16px;
+height: 41px;
+overflow: hidden;
+}
+#oresAsixronisTmimata{
+width: 77%;
+border: none;
+text-align: right;
+font-size: 16px;
+height: 41px;
+overflow: hidden;
+}
+#kostosOrasAnalog{
+width: 77%;
+border: none;
+text-align: right;
+font-size: 16px;
+height: 41px;
+font-weight: bold;
+overflow: hidden;
+}
+#KostoAsixr{
+width: 77%;
+border: none;
+text-align: right;
+font-size: 16px;
+height: 41px;
+font-weight: bold;
+overflow: hidden;
+}
+
+textarea{
+    margin-top: 5px;
+    margin-left: 50px;
+    outline-style: none;
+    background-color: rgb(247, 242, 236);
+}
+
+/**************************************** Default styling for the table *************************************************/
+
+    #SYN5ofelos{
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    button{
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(46, 44, 51);
+        color: #f2f2f2;
+        margin-left: 635px;
+        margin-top: 30px;
+        width: 10%;
+        height: 40px;
+        font-size: 17px;
+    }
+    button:hover{
+        background-color: #9ac5d2;
+        color: rgb(22, 2, 2);
+    }
+    .my-button {
+        margin-left: 825px;
+        margin-top: 2px;
+        margin-bottom: 30px;
+        text-align: center;
+        width: 10%;
+        height: 39px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #d8e3ea;
+        color: #121111;
+        border-width: 1px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+     /* Adjust button position for smaller screens */
+     @media screen and (max-width: 100px) {
+        .my-button {
+            margin-top: 1px;
+        }
+    }
+    .my-button:hover{
+        background-color: #1c1479;
+        color: white;
+    }
+
+    footer{
+        color: aliceblue;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        background-color: rgb(10, 10, 57);
+        }
+
+body{
+
+    background-color:rgb(235, 241, 242);
+}
+
+form{
+    background-color:rgb(240, 246, 248);
+}
